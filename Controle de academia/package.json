@@ -5,7 +5,7 @@
   "main": "arraysturmaa.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": " npm-run-all -p nodemon ",
+    "start": " nodemon ",
     "nodemon":"nodemon  server.js",
     "browsersync":"browser-sync start --proxy http://localhost:5000 --files 'public,views' "
   },
