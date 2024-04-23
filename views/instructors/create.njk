@@ -1,0 +1,45 @@
+    {% extends "layout.njk" %}
+
+    {% block content %}
+
+    <form class="card" method="POST" action="/instructors">   
+    <section class="avatar" style="  background: url(https://source.unsplash.com/collection/3465564/1080x1920) no-repeat center center / cover ">       
+    </section>
+      <section class="details">
+        <h3> CADASTRO DO INSTRUTOR </h3>
+        <div class ="item" >
+              <div> DIGITE SEU NOME</div>
+              <input type="text" name="name" placeholder="Nome Completo" >
+        </div>  
+        <div class ="item" >
+              <div> SUA FOTO</div>
+              <input type="url" name="avatar_url" placeholder="Link da sua foto" >
+        </div>  
+         <div class ="item">
+              <div> Digite sua data de nascimento</div>
+              <div> 
+                  <input type="date" name="birth" > 
+              </div>
+        </div>  
+        <div class ="item">
+              <div> Qual sua sexualidade ?</div>
+              <div> 
+                  <span><input type="radio" name="gender" value= "M" checked>  MASCULINO</span>
+                  <span><input type="radio" name="gender" value= "F" >  FEMININO</span>
+                  <span><input type="radio" name="gender" value= "O" >  OUTRO</span>
+                  <span><input type="radio" name="gender" value= "T" >  TRANSGÊNERO</span>
+                  <span><input type="radio" name="gender" value= "N" >  NÂO BINÁRIO</span>
+              </div>
+        </div>  
+        <div class ="item">
+              <div> Especialidades </div>
+              <div> 
+               <input type="text" name="services" placeholder="separe por virgula">
+              </div>
+        </div>  
+        
+        <button type="submit">FINALIZAR</button>
+      </section>  
+    </form>
+
+    {% endblock %}
