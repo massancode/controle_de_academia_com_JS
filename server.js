@@ -3,8 +3,12 @@ const server = express()
 const nunjucks = require('nunjucks')
 const routes = require ("./routes")
 
+
 server.use(express.static('public'))
 server.use (routes)
+server.use (express.urlencoded({extended:true}));
+
+
 
 server.set ("view engine","njk")
 nunjucks.configure ("views",{
@@ -12,6 +16,10 @@ nunjucks.configure ("views",{
     autoescape:false,
     noCache:true
 })
+
+
+
+
 server.listen (5000,function(){
     console.log("hello wolrd!!!")
 })

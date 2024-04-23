@@ -15,7 +15,12 @@
     })
 
     routes.post ("/instructors",function(req,res){
-        return res.send ("RECEBIDO")
-    })
+
+
+       return res.send (req.body)
+   })
+
+
+
 
     module.exports = routes
