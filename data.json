@@ -1,0 +1,13 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "name": "FERNANDO LUCAS DE CASTRO CAVALCANTE RIBAMAR",
+      "avatar_url": "https://i.imgur.com/vit730p.jpeg",
+      "birth": 855100800000,
+      "gender": "M",
+      "services": "crosfit,natação",
+      "created_at": 1714445205643
+    }
+  ]
+}
