@@ -16,7 +16,7 @@
         </div>  
          <div class ="item">
               <div> Idade</div>
-              <div> {{instructor.birth}}</div>
+              <div> {{instructor.age}}</div>
         </div>  
         <div class ="item">
               <div> Sexo</div>
@@ -25,7 +25,7 @@
         <div class ="item">
               <div> Acompanhamento</div>
               <div> 
-             {% for servirce in services %}
+             {% for service in instructor.services %}
              <span>{{service}}</span>
              {% endfor %}
               </div>
@@ -34,8 +34,10 @@
               <div> Desde </div>
               <div>{{instructor.created_at}} </div>
         </div>  
-
+              <a href="#">EDITAR</a>
       </section>  
+     
     </div>
+   
 
     {% endblock %}
