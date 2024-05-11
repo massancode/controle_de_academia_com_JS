@@ -5,15 +5,16 @@ const {age} = require ('./utils')
 //show
  exports.show = function (req,res){
              
-  const {id} = req.params 
+  const {id} = req.params
 
   const  foundInstructor = data.instructors.find (function(instructor){
-    return  id == instructor.id 
+    return  instructor.id == id 
   })
 
   
 
-  if (!foundInstructor) return res.send ("Instructor not found")
+  if (!foundInstructor){
+     return res.send ("Instructor not found")}
 
     const instructor = {
       ...foundInstructor,
@@ -23,6 +24,28 @@ const {age} = require ('./utils')
     }
   
   return res.render ("instructors/show",{instructor})
+ }
+ exports.edit = function (req,res){
+             
+  const {id} = req.params
+
+  const  foundInstructor = data.instructors.find (function(instructor){
+    return  instructor.id == id 
+  })
+
+  
+
+  if (!foundInstructor){
+     return res.send ("Instructor not found")}
+
+    const instructor = {
+      ...foundInstructor,
+      age:age(foundInstructor.birth),
+      services: foundInstructor.services.split(","),
+      created_at:  Intl.DateTimeFormat('pt-Br').format(foundInstructor.created_at)
+    }
+  
+  return res.render ("instructors/edit",{instructor})
  }
  
 

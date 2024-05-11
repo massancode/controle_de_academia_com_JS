@@ -2,44 +2,42 @@
 
     {% block content %}
 
-    <form class="card" method="POST" action="/instructors">   
-    <section class="avatar" style="  background: url(https://source.unsplash.com/collection/3465564/1080x1920) no-repeat center center / cover ">       
+
+    <div class="card">   
+      
+    <section class="avatar" style="  background: url({{instructor.avatar_url}}) no-repeat center center / cover ">  
+     
     </section>
       <section class="details">
-        <h3> EDITAR INSTRUTOR </h3>
-        <div class ="item" >
-              <div> DIGITE SEU NOME</div>
-              <input type="text" name="name" placeholder="Nome Completo" >
-        </div>  
-        <div class ="item" >
-              <div> SUA FOTO</div>
-              <input type="url" name="avatar_url" placeholder="Link da sua foto" >
+        <h3> Detalhes </h3>
+        <div class ="item">
+              <div> Instrutor </div>
+              <div> {{instructor.name}}</div>
         </div>  
          <div class ="item">
-              <div> Digite sua data de nascimento</div>
-              <div> 
-                  <input type="date" name="birth" > 
-              </div>
+              <div> Idade</div>
+              <div> {{instructor.age}}</div>
         </div>  
         <div class ="item">
-              <div> Qual sua sexualidade ?</div>
-              <div> 
-                  <span><input type="radio" name="gender" value= "Masculino" checked>  MASCULINO</span>
-                  <span><input type="radio" name="gender" value= "Femenino" >  FEMININO</span>
-                  <span><input type="radio" name="gender" value= "Outro" >  OUTRO</span>
-                  <span><input type="radio" name="gender" value= "Transgênero" >  TRANSGÊNERO</span>
-                  <span><input type="radio" name="gender" value= "Não Binario" >  NÂO BINÁRIO</span>
-              </div>
+              <div> Sexo</div>
+              <div> {{instructor.gender}}</div>
         </div>  
         <div class ="item">
-              <div> Especialidades </div>
+              <div> Acompanhamento</div>
               <div> 
-               <input type="text" name="services" placeholder="separe por virgula">
+             {% for service in instructor.services %}
+             <span>{{service}}</span>
+             {% endfor %}
               </div>
         </div>  
-        
-        <button type="submit">FINALIZAR</button>
+         <div class ="item">
+              <div> Desde </div>
+              <div>{{instructor.created_at}} </div>
+        </div>  
+              <a href="#">EDITAR</a>
       </section>  
-    </form>
+     
+    </div>
+   
 
     {% endblock %}

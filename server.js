@@ -1,3 +1,5 @@
+
+
 const express = require('express')
 const server = express()
 const nunjucks = require('nunjucks')
@@ -12,9 +14,10 @@ server.use (routes)
 server.set ("view engine","njk")
 nunjucks.configure ("views",{
     express:server,
-    autoescape:false,
+    autoescape:true,
     noCache:true
 })
+
 
 server.listen (5000,function(){
     console.log("hello wolrd!!!")
