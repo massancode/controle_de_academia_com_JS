@@ -7,38 +7,7 @@
     </section>
       <section class="details">
         <h3> CADASTRO DO INSTRUTOR </h3>
-        <div class ="item" >
-              <div> DIGITE SEU NOME</div>
-              <input type="text" name="name" placeholder="Nome Completo" >
-        </div>  
-        <div class ="item" >
-              <div> SUA FOTO</div>
-              <input type="url" name="avatar_url" placeholder="Link da sua foto" >
-        </div>  
-         <div class ="item">
-              <div> Digite sua data de nascimento</div>
-              <div> 
-                  <input type="date" name="birth" > 
-              </div>
-        </div>  
-        <div class ="item">
-              <div> Qual sua sexualidade ?</div>
-              <div> 
-                  <span><input type="radio" name="gender" value= "Masculino" checked>  MASCULINO</span>
-                  <span><input type="radio" name="gender" value= "Femenino" >  FEMININO</span>
-                  <span><input type="radio" name="gender" value= "Outro" >  OUTRO</span>
-                  <span><input type="radio" name="gender" value= "Transgênero" >  TRANSGÊNERO</span>
-                  <span><input type="radio" name="gender" value= "Não Binario" >  NÂO BINÁRIO</span>
-              </div>
-        </div>  
-        <div class ="item">
-              <div> Especialidades </div>
-              <div> 
-               <input type="text" name="services" placeholder="separe por virgula">
-              </div>
-        </div>  
-        
-        <button type="submit">FINALIZAR</button>
+      {% include 'instructors/fields.njk' %}
       </section>  
     </form>
 

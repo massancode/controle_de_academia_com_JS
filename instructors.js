@@ -1,6 +1,6 @@
 const fs = require ('fs')
 const data = require ('./data.json')
-const {age} = require ('./utils')
+const {age,date} = require ('./utils')
 
 //show
  exports.show = function (req,res){
@@ -47,11 +47,6 @@ const {age} = require ('./utils')
   
   return res.render ("instructors/edit",{instructor})
  }
- 
-
-
-
- //create 
 exports.post = function(req,res){
        
     const Keys = Object.keys (req.body) // O Objeto cria um array com as chaves do obejto
@@ -86,4 +81,19 @@ exports.post = function(req,res){
 
     //return res.send (req.body)
     
+}
+exports.editNow =  function(req,res){
+  const {id} = req.params
+
+  const  foundInstructor = data.instructors.find (function(instructor){
+    return  instructor.id == id 
+  })
+
+  if (!foundInstructor){
+     return res.send ("Instructor not found")}
+     
+         date(foundInstructor.birth)
+         
+
+  return res.render ('instructors/edit',{instructor:foundInstructor})
 }

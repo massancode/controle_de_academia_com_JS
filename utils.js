@@ -12,8 +12,26 @@ age: function(timestamp){
     }
 
     return age 
+},
+
+ date: function (timestamp){
+   const date = new Date (timestamp)
+
+   //yyy
+   const year = date.getFullYear()
+   //mm
+   const month = date.getMonth() +1
+   //dd
+   const day = date.getDate()    
+   // return yyyy-mm-dd
+   console.log(`${year}-${month}-${day}`)
+ }
+
 }
-}
+
+
+
+
 // Para saber quandos anos a pessoa tem 
 
 // Ano de nascimento - ano atual = idade 
@@ -30,3 +48,6 @@ age: function(timestamp){
     // 8 - 9 = -1 (Resultado negativo)
     // 8 - 8 =  0 (Resultado 0)
     // 8 - 7  =1 (Resultado positivo) 
+
+
+    

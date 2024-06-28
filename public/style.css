@@ -159,7 +159,7 @@ input::placeholder{
     font-weight: normal;
 }
 
-button[type="submit"]{
+button[type="submit"],a.button{
     padding: 8px 32px ;
     width: 100%;
     background-color: green;
@@ -169,16 +169,16 @@ button[type="submit"]{
     font-size: 16px;
 }
 
-button:hover[type="submit"]{
-    padding: 8px 32px;
-    width: 100%;
-    background-color: orange;
-    color:black;
-    border-radius: 4px;
-    margin-top: 32px;
-    font-size: 16px;
-    cursor: pointer;
+a.button{
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
 }
+
+
+
+  
 
 
 

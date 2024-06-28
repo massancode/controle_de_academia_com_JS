@@ -1,0 +1,32 @@
+   <div class ="item" >
+              <div> DIGITE SEU NOME</div>
+              <input type="text" name="name" placeholder="Nome Completo" value='{{instructor.name}}' >
+        </div>  
+        <div class ="item" >
+              <div> SUA FOTO</div>
+              <input type="url" name="avatar_url" placeholder="Link da sua foto" value='{{instructor.avatar_url}}'  >
+        </div>  
+         <div class ="item">
+              <div> Digite sua data de nascimento</div>
+              <div> 
+                  <input type="date" name="birth" value='{{instructor.birth}}'  > 
+              </div>
+        </div>  
+        <div class ="item">
+              <div> Qual sua sexualidade ?</div>
+              <div> 
+                  <span><input type="radio" name="gender" value= "Masculino" {% if instructor.gender == 'Masculino'%} checked {% endif %}}>  MASCULINO</span>
+                  <span><input type="radio" name="gender" value= "Femenino"{% if instructor.gender == 'Femenino'%} checked {% endif %}} >  FEMININO</span>
+                  <span><input type="radio" name="gender" value= "Outro" {% if instructor.gender == 'Outro'%} checked {% endif %}}>  OUTRO</span>
+                  <span><input type="radio" name="gender" value= "Transgênero"{% if instructor.gender == 'Transgênero'%} checked {% endif %}} >  TRANSGÊNERO</span>
+                  <span><input type="radio" name="gender" value= "Não Binario" {% if instructor.gender == 'Não Binario'%} checked {% endif %}}>  NÂO BINÁRIO</span>
+              </div>
+        </div>  
+        <div class ="item">
+              <div> Especialidades </div>
+              <div> 
+               <input type="text" name="services" placeholder="separe por virgula" value='{{instructor.services}}'>
+              </div>
+        </div>  
+        
+        <button type="submit">SALVAR</button>
