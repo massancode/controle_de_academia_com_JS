@@ -18,8 +18,5 @@
     routes.get('/:id/edit',instructors.editNow)
     routes.get('/instructors/:id',instructors.show)
     routes.post ("/instructors", instructors.post)
-
-   
-
-
+    
     module.exports = routes

@@ -18,13 +18,14 @@ age: function(timestamp){
    const date = new Date (timestamp)
 
    //yyy
-   const year = date.getFullYear()
+   const year = date.getUTCFullYear(-2)
    //mm
-   const month = date.getMonth() +1
+   const month = `0${date.getUTCMonth() +1}`.slice(-2)
    //dd
-   const day = date.getDate()    
+   const day = `0${date.getUTCDate()}`.slice(-2)
+    
    // return yyyy-mm-dd
-   console.log(`${year}-${month}-${day}`)
+   return `${year}-${month}-${day}`
  }
 
 }

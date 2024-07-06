@@ -8,6 +8,15 @@
       "gender": "Masculino",
       "services": "crosfit,natação",
       "created_at": 1714599446167
+    },
+    {
+      "id": 2,
+      "name": "DAniel ",
+      "avatar_url": "https:\\\\img.com",
+      "birth": 913420800000,
+      "gender": "Não Binario",
+      "services": "crosfit,musculation",
+      "created_at": 1720247426417
     }
   ]
 }
