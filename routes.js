@@ -15,8 +15,12 @@
         return res.render ("instructors/create")
     })
 
+    routes.put("/instructors",instructors.put)
+
     routes.get('/:id/edit',instructors.editNow)
     routes.get('/instructors/:id',instructors.show)
     routes.post ("/instructors", instructors.post)
     
+    routes.delete ("/instructors", instructors.delete)
+
     module.exports = routes
