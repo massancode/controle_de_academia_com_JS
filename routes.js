@@ -7,9 +7,7 @@
         return res.render ("layout")
     })
 
-    routes.get ('/instructors',function(req,res){
-        return res.render ("instructors/index")
-    })
+    routes.get ('/instructors',instructors.index)
 
     routes.get ('/instructors/create',function(req,res){
         return res.render ("instructors/create")

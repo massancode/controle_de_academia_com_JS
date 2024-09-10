@@ -3,6 +3,10 @@ const data = require ('./data.json')
 const {age,date} = require ('./utils')
 
 //show
+exports.index =function(req,res){
+
+  return res.render ("instructors/index",{instructors:data.instructors})
+}
  exports.show = function (req,res){
              
   const {id} = req.params
@@ -103,6 +107,8 @@ exports.editNow =  function(req,res){
 
   return res.render ('instructors/edit',{instructor})
 }
+
+
 
 exports.put = function (req,res){
   const {id} = req.body
