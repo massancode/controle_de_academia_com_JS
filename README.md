@@ -46,7 +46,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
 
 
 # Agora so iniciar
--npm install
+-npm start
 
 ## 📸 Capturas de Tela -  Futuramente
   
