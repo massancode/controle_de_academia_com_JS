@@ -32,8 +32,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
 
 ## :hammer_and_wrench: Features
 
--   [ ] Maaior Responsividade.
--   [ ] Integrar com boletos.
+-   [ ] Maior Responsividade.
+-   [ ] Integrar boletos.
 -   [ ] Sistema de ficha para usuarios.
 -   [ ] Botão para alterar cor de fundo.
 
