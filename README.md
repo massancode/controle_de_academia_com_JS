@@ -1,11 +1,11 @@
 
 <h1 align="center">
-  <img alt="Todo" height="80" title="academy_js" src="./midia/logo.png" />
+  <img alt="Todo" height="160" title="academy_js" src="./midia/logo.png" />
 </h1>
 
 
 
-![cover](./midia/logo.png)
+
 
 ## 💻 Projeto
 
@@ -48,7 +48,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e ferramentas:
 # Agora so iniciar
 -npm install
 
-## 📸 Capturas de Tela
-
+## 📸 Capturas de Tela -  Futuramente
+  
 
 
