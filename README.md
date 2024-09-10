@@ -5,7 +5,7 @@
 
 
 
-
+![cover](./midia/cover.png)
 
 ## 💻 Projeto
 
